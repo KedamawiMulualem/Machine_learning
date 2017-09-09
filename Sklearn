@@ -1,0 +1,10 @@
+from sklearn import tree
+#apple & orange size with texture
+features=[[140,1],[170,2],[130,1],[120,1],[115,1],[145,1],[160,2],[190,1],[195,2],[200,2]]
+#1 for appple 2 for orange
+lables=[2,2,1,1,1,2,2,1,1,1]
+#learning 
+cl=tree.DecisionTreeClassifier()
+cl=cl.fit(features,lables)
+#predictiong from user input
+print (cl.predict([[122,2]]))
